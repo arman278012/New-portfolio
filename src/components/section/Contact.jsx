@@ -163,7 +163,7 @@ export const Contact = () => {
                         </div>
 
                         {/* Availability Status */}
-                        <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-800">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-800">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
                                 <span className="font-semibold text-gray-900 dark:text-white">Currently Available</span>
@@ -171,7 +171,7 @@ export const Contact = () => {
                             <p className="text-gray-600 dark:text-gray-300 text-sm">
                                 I'm open to new opportunities, collaborations, and interesting projects. Let's build something amazing together!
                             </p>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right Column - Contact Form */}
@@ -301,12 +301,11 @@ export const Contact = () => {
                 </div>
 
                 {/* Stats */}
-                <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-6">
                     {[
                         { value: '95%', label: 'Response Rate', icon: '📨' },
                         { value: '24h', label: 'Avg. Response Time', icon: '⚡' },
                         { value: '20+', label: 'Projects Discussed', icon: '🚀' },
-                        { value: '100%', label: 'Satisfaction', icon: '❤️' }
                     ].map((stat, index) => (
                         <div key={index} className="text-center p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                             <div className="text-3xl mb-2">{stat.icon}</div>

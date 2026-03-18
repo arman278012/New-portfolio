@@ -64,7 +64,7 @@ export const Footer = () => {
         { icon: <Mail className="w-4 h-4" />, text: 'aa278012@gmail.com' },
         { icon: <Phone className="w-4 h-4" />, text: '+91 8299760673' },
         { icon: <MapPin className="w-4 h-4" />, text: 'Bangalore, Karnataka' },
-        { icon: <Calendar className="w-4 h-4" />, text: 'Available for work' }
+        // { icon: <Calendar className="w-4 h-4" />, text: 'Available for work' }
     ];
 
     return (
@@ -242,10 +242,9 @@ export const Footer = () => {
                 </div>
 
                 {/* Stats Bar */}
-                <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
                     {[
                         { label: 'Projects Delivered', value: '50+' },
-                        { label: 'Happy Clients', value: '30+' },
                         { label: 'Code Commits', value: '1k+' },
                         { label: 'Coffee Cups', value: '∞' }
                     ].map((stat, index) => (
