@@ -98,10 +98,9 @@ export const Navbar = ({ darkMode, toggleDarkMode }) => {
                             <img
                                 src={logo}
                                 alt="Logo"
-                                className="h-12 md:h-[120px] w-auto object-contain cursor-pointer mt-5"
+                                className="h-20 md:h-[120px] w-auto object-contain cursor-pointer mt-5"
                             />
                         </a>
-
                     </div>
 
                     {/* Desktop Navigation */}
@@ -187,84 +186,112 @@ export const Navbar = ({ darkMode, toggleDarkMode }) => {
                 <div className="lg:hidden">
                     {/* Backdrop */}
                     <div
-                        className="fixed inset-0 bg-black/30 dark:bg-black/50 backdrop-blur-sm"
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md transition-opacity duration-300"
                         onClick={() => setIsOpen(false)}
                     ></div>
 
                     {/* Menu Panel */}
-                    <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl transform transition-transform duration-300">
+                    <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl shadow-[0_0_40px_rgba(0,0,0,0.2)] border-l border-white/20 dark:border-gray-800 transform transition-transform duration-500 ease-in-out">
+
                         <div className="flex flex-col h-full">
-                            {/* Menu Header */}
-                            <div className="p-6 border-b border-gray-200 dark:border-gray-800">
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
-                                            <Terminal className="w-6 h-6 text-white" />
-                                        </div>
-                                        <div>
-                                            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Navigation</h2>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400">Select a section</p>
-                                        </div>
-                                    </div>
-                                    <button
-                                        onClick={() => setIsOpen(false)}
-                                        className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    >
-                                        <X className="w-6 h-6" />
-                                    </button>
-                                </div>
+
+                            {/* Header */}
+                            <div className="p-6 flex items-center justify-between border-b border-gray-200/50 dark:border-gray-800/50">
+
+                                {/* Logo */}
+                                <a
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        window.scrollTo({ top: 0, behavior: "smooth" });
+                                    }}
+                                    className="flex items-center gap-2"
+                                >
+                                    <img
+                                        src={logo}
+                                        alt="Logo"
+                                        className="h-14 w-auto object-contain"
+                                    />
+                                </a>
+
+                                {/* Close Button */}
+                                <button
+                                    onClick={() => setIsOpen(false)}
+                                    className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 transition-all duration-300 group"
+                                >
+                                    <X className="w-5 h-5 text-gray-700 dark:text-gray-300 group-hover:text-white" />
+                                </button>
                             </div>
 
                             {/* Menu Items */}
-                            <div className="flex-1 overflow-y-auto p-6">
-                                <div className="space-y-2">
-                                    {navLinks.map((link, index) => (
+                            <div className="flex-1 overflow-y-auto p-6 space-y-3">
+                                {navLinks.map((link) => {
+                                    const isActive = activeSection === link.href.substring(1);
+
+                                    return (
                                         <button
                                             key={link.name}
                                             onClick={() => scrollToSection(link.href)}
-                                            className={`flex items-center gap-3 w-full p-4 rounded-xl transition-all duration-300 group ${activeSection === link.href.substring(1)
-                                                ? 'bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 text-blue-600 dark:text-blue-400'
-                                                : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300'
+                                            className={`flex items-center gap-4 w-full p-4 rounded-2xl transition-all duration-300 group relative overflow-hidden
+                                ${isActive
+                                                    ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 dark:text-blue-400 shadow-inner"
+                                                    : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
                                                 }`}
                                         >
-                                            <div className={`p-2 rounded-lg ${activeSection === link.href.substring(1)
-                                                ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
-                                                : 'bg-gray-100 dark:bg-gray-800 group-hover:bg-gradient-to-r group-hover:from-blue-500/20 group-hover:to-purple-500/20'
-                                                }`}>
+                                            {/* Glow Effect */}
+                                            {isActive && (
+                                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-xl"></div>
+                                            )}
+
+                                            {/* Icon */}
+                                            <div className={`p-2 rounded-xl transition-all duration-300
+                                    ${isActive
+                                                    ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
+                                                    : "bg-gray-100 dark:bg-gray-800 group-hover:bg-gradient-to-r group-hover:from-blue-500/20 group-hover:to-purple-500/20"
+                                                }`}
+                                            >
                                                 {link.icon}
                                             </div>
-                                            <span className="font-medium">{link.name}</span>
-                                            {activeSection === link.href.substring(1) && (
-                                                <div className="ml-auto w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+
+                                            {/* Text */}
+                                            <span className="font-medium tracking-wide">
+                                                {link.name}
+                                            </span>
+
+                                            {/* Active Dot */}
+                                            {isActive && (
+                                                <span className="ml-auto w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></span>
                                             )}
                                         </button>
-                                    ))}
-                                </div>
+                                    );
+                                })}
+                            </div>
 
-                                {/* Social Links - Mobile */}
-                                <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-                                    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4">CONNECT WITH ME</h3>
-                                    <div className="flex gap-3">
-                                        {socialLinks.map((social, index) => (
-                                            <a
-                                                key={index}
-                                                href={social.href}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300 group"
-                                                aria-label={social.label}
-                                            >
-                                                <div className="flex items-center justify-center gap-2">
-                                                    <div className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                                        {social.icon}
-                                                    </div>
-                                                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                                        {social.label}
-                                                    </span>
+                            {/* Social Links */}
+                            <div className="p-6 border-t border-gray-200/50 dark:border-gray-800/50">
+                                <h3 className="text-xs tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                                    CONNECT
+                                </h3>
+
+                                <div className="flex gap-3">
+                                    {socialLinks.map((social, index) => (
+                                        <a
+                                            key={index}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 p-3 rounded-xl bg-gray-100 dark:bg-gray-800 hover:shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300 group"
+                                        >
+                                            <div className="flex flex-col items-center gap-1">
+                                                <div className="text-gray-600 dark:text-gray-400 group-hover:text-blue-500">
+                                                    {social.icon}
                                                 </div>
-                                            </a>
-                                        ))}
-                                    </div>
+                                                <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
+                                                    {social.label}
+                                                </span>
+                                            </div>
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </div>
