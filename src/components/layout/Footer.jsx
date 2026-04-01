@@ -104,7 +104,7 @@ export const Footer = () => {
                         </div>
 
                         <p className="text-gray-400 leading-relaxed">
-                            Frontend / React Developer creating exceptional digital experiences with modern technologies and clean code.
+                            Full Stack Developer creating exceptional digital experiences with modern technologies and clean code.
                         </p>
 
                         <div className="flex gap-3">
