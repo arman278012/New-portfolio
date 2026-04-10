@@ -107,71 +107,71 @@ export const Projects = () => {
 
     const projects = [
         {
-            name: 'E-commerce Platform',
-            type: 'Full Stack',
-            description: 'Modern e-commerce with real-time inventory and secure payments.',
-            icon: '🛒',
-            status: 'Live',
-            techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-            github: 'https://github.com',
-            demo: 'https://demo.com',
-            date: '2024'
-        },
-        {
-            name: 'Task Manager Pro',
-            type: 'Productivity',
-            description: 'Collaborative task management with drag-drop interface.',
-            icon: '📋',
-            status: 'Live',
-            techStack: ['React', 'TypeScript', 'Firebase'],
-            github: 'https://github.com',
-            demo: 'https://demo.com',
-            date: '2024'
-        },
-        {
-            name: 'Weather Dashboard',
-            type: 'Frontend',
-            description: 'Interactive weather dashboard with charts and forecasts.',
-            icon: '☀️',
-            status: 'Live',
-            techStack: ['React', 'Chart.js', 'API'],
-            github: 'https://github.com',
-            demo: 'https://demo.com',
-            date: '2023'
-        },
-        {
-            name: 'Fitness Tracker',
-            type: 'Mobile',
-            description: 'Mobile fitness app with workout plans and analytics.',
-            icon: '💪',
+            name: 'AssetLend (Fintech Loan App)',
+            type: 'Full Stack / Mobile',
+            description: 'Leading development of a fintech application enabling loans against mutual funds. Architected for high scalability, capable of handling 200K+ requests. Responsible for system design, feature planning, and end-to-end development lifecycle.',
+            icon: '🏦',
             status: 'In Progress',
-            techStack: ['React Native', 'Firebase'],
-            github: 'https://github.com',
+            techStack: ['React Native', 'Node.js', 'MongoDB', 'Firebase'],
+            github: 'YOUR_GITHUB_LINK',
+            demo: 'https://drive.google.com/file/d/1n9D2zBiVRS2BUn_XcBZU3ycj59Di9j8C/view',
+            date: '2025'
+        },
+        {
+            name: 'AssetLend Admin Dashboard',
+            type: 'Full Stack',
+            description: 'Designed and developed the complete admin system for the AssetLend fintech platform, managing users, loans, approvals, and analytics. Built both frontend and backend architecture from scratch.',
+            icon: '🧾',
+            status: 'In Progress',
+            techStack: ['React', 'Node.js', 'MongoDB', 'Redux'],
+            github: 'YOUR_GITHUB_LINK',
+            demo: "https://assetlend-admin-pannel.vercel.app",
+            date: '2025'
+        },
+        {
+            name: 'Ametheus Health (Global E-commerce Platform)',
+            type: 'Full Stack',
+            description: 'Built a scalable cross-border e-commerce platform for medicines with multi-currency support (USD, AED, NPR, etc.), serving international markets including the US, Dubai, and Nepal. Engineered to handle 100K+ concurrent requests with optimized performance, secure payments, and real-time inventory management.',
+            icon: '💊',
+            status: 'Live',
+            techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+            github: 'https://github.com/gourav-mishra551/AH-Medicine-new',
+            demo: 'https://ah-medicine-new.vercel.app',
+            date: '2024'
+        },
+        {
+            name: 'Ametheus Admin Dashboard',
+            type: 'Full Stack',
+            description: 'Designed and developed a complete admin dashboard managing end-to-end operations including inventory, orders, users, and analytics. Enabled seamless onboarding of 27,000+ medicines via dynamic forms and bulk operations. Acts as the core control system for the entire platform.',
+            icon: '📊',
+            status: 'Live',
+            techStack: ['React', 'Redux', 'Node.js', 'MongoDB'],
+            github: 'https://github.com/arman278012/Ametheushealth-Admin-Dashboard',
+            demo: 'https://ametheushealth-admin-dashboard.vercel.app',
+            date: '2024'
+        },
+        {
+            name: 'Assetorix (Real Estate Platform)',
+            type: 'Full Stack',
+            description: 'Developed a real estate marketplace where users can explore, connect with property owners, and purchase properties. Focused on user experience, seamless communication, and scalable architecture.',
+            icon: '🏠',
+            status: 'Live',
+            techStack: ['React', 'Node.js', 'MongoDB'],
+            github: 'YOUR_GITHUB_LINK',
             demo: null,
             date: '2024'
         },
         {
-            name: 'Portfolio CMS',
+            name: 'Doctor Consultation Platform',
             type: 'Full Stack',
-            description: 'Custom CMS for managing portfolio content.',
-            icon: '🎨',
+            description: 'Built a multilingual telemedicine platform enabling patients to book appointments and consult doctors via real-time video conferencing. Integrated scheduling, user management, and communication systems.',
+            icon: '👨‍⚕️',
             status: 'Live',
-            techStack: ['Next.js', 'Sanity.io'],
-            github: 'https://github.com',
-            demo: 'https://demo.com',
-            date: '2023'
-        },
-        {
-            name: 'Crypto Dashboard',
-            type: 'Frontend',
-            description: 'Cryptocurrency tracker with real-time market data.',
-            icon: '💰',
-            status: 'Live',
-            techStack: ['React', 'WebSocket', 'API'],
-            github: 'https://github.com',
-            demo: 'https://demo.com',
+            techStack: ['React', 'WebRTC', 'Node.js', 'MongoDB'],
+            github: 'https://github.com/gourav-mishra551/doctor-consultation',
+            demo: 'https://doctor-consultation.vercel.app/',
             date: '2024'
-        }
+        },
     ];
 
     const filters = [
@@ -205,7 +205,7 @@ export const Projects = () => {
                 </div>
 
                 {/* Simple filter */}
-                <div className="flex flex-wrap justify-center gap-2 mb-8">
+                {/* <div className="flex flex-wrap justify-center gap-2 mb-8">
                     {filters.map((filter) => (
                         <button
                             key={filter.id}
@@ -218,7 +218,7 @@ export const Projects = () => {
                             {filter.label}
                         </button>
                     ))}
-                </div>
+                </div> */}
 
                 {/* Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
