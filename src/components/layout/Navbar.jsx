@@ -71,7 +71,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }) => {
 
     const socialLinks = [
         { icon: <Github className="w-5 h-5" />, href: 'https://github.com/arman278012', label: 'GitHub' },
-        { icon: <Linkedin className="w-5 h-5" />, href: 'www.linkedin.com/in/arman-ali-06011b1ab', label: 'LinkedIn' },
+        { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/arman-ali-06011b1ab', label: 'LinkedIn' },
         { icon: <Mail className="w-5 h-5" />, href: 'mailto:aa278012@gmail.com', label: 'Email' }
     ];
 
