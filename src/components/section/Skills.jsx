@@ -42,6 +42,7 @@ export const Skills = () => {
                 { name: 'REST APIs', icon: '🔌', level: 'advanced' },
                 { name: 'MongoDB', icon: '🍃', level: 'intermediate' },
                 { name: 'Firebase', icon: '🔥', level: 'intermediate' },
+                { name: 'Spring Boot', icon: '🌱', level: 'learning' },
             ]
         },
         tools: {
