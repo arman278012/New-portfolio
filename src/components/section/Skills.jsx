@@ -63,7 +63,7 @@ export const Skills = () => {
             skills: [
                 { name: 'React Native (Expo)', icon: '📱', level: 'intermediate' },
                 { name: 'Flutter', icon: '🦋', level: 'learning' },
-                { name: 'Dart', icon: '🎯', level: 'intermediate' },
+                { name: 'Dart', icon: '🎯', level: 'learning' },
             ]
         }
     };
