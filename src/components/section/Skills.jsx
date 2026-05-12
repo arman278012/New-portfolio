@@ -62,7 +62,7 @@ export const Skills = () => {
             icon: <Smartphone className="w-6 h-6 text-pink-600 dark:text-pink-400" />,
             skills: [
                 { name: 'React Native (Expo)', icon: '📱', level: 'intermediate' },
-                { name: 'Flutter', icon: '🦋', level: 'intermediate' },
+                { name: 'Flutter', icon: '🦋', level: 'learning' },
                 { name: 'Dart', icon: '🎯', level: 'intermediate' },
             ]
         }
