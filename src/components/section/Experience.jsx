@@ -275,6 +275,7 @@ export const Experience = () => {
                 description:
                     'Completed primary and secondary education with a well-rounded academic background, building strong core fundamentals across all subjects.',
                 achievements: [
+                    'Scored 10 CGPA in Class X board examinations',
                     'Consistent academic performance across all school years',
                     'Active participation in extracurricular and sports activities'
                 ],
