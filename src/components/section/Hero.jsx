@@ -46,7 +46,7 @@ export const Hero = () => {
 
     const handleDownloadResume = () => {
         const downloadUrl =
-            "https://drive.google.com/uc?export=download&id=1ZTbOdxnk2D-KNi3wdMXLjEZkstbEh47g";
+            "https://drive.google.com/file/d/1k3bAKC3G9dNqcYWxExdcAcweIDfp3Xrp/view?usp=sharing";
 
         const link = document.createElement("a");
         link.href = downloadUrl;
