@@ -196,7 +196,7 @@ export const Experience = () => {
             {
                 title: 'Full Stack Developer',
                 company: 'Ametheus Holdings Pvt. Ltd.',
-                period: 'Apr 2024 – June 2025',
+                period: 'Aug 2023 – June 2025',
                 location: 'New Delhi, India',
                 type: 'Full-time',
                 description:
@@ -211,24 +211,24 @@ export const Experience = () => {
                 color: 'green',
                 icon: '💻'
             },
-            {
-                title: 'Frontend Developer',
-                company: 'Vendors Tech',
-                period: 'Aug 2023 – Mar 2024',
-                location: 'Pune, India',
-                type: 'Internship',
-                description:
-                    'Kicked off my professional journey as a frontend intern, collaborating with cross-functional teams to design and ship a user-friendly software product. Gained hands-on experience in debugging, REST API integration, and team-based development workflows.',
-                achievements: [
-                    'Collaborated with the team to design, develop, and launch a production software product',
-                    'Conducted testing and debugging to identify and resolve bugs, ensuring stable performance',
-                    'Integrated RESTful APIs and managed database queries for seamless data flow',
-                    'Contributed to UI development using React and modern frontend tooling'
-                ],
-                skills: ['React', 'JavaScript', 'REST APIs', 'HTML5', 'CSS3', 'Git'],
-                color: 'purple',
-                icon: '🌐'
-            }
+            // {
+            //     title: 'Frontend Developer',
+            //     company: 'Vendors Tech',
+            //     period: 'Aug 2023 – Mar 2024',
+            //     location: 'Pune, India',
+            //     type: 'Internship',
+            //     description:
+            //         'Kicked off my professional journey as a frontend intern, collaborating with cross-functional teams to design and ship a user-friendly software product. Gained hands-on experience in debugging, REST API integration, and team-based development workflows.',
+            //     achievements: [
+            //         'Collaborated with the team to design, develop, and launch a production software product',
+            //         'Conducted testing and debugging to identify and resolve bugs, ensuring stable performance',
+            //         'Integrated RESTful APIs and managed database queries for seamless data flow',
+            //         'Contributed to UI development using React and modern frontend tooling'
+            //     ],
+            //     skills: ['React', 'JavaScript', 'REST APIs', 'HTML5', 'CSS3', 'Git'],
+            //     color: 'purple',
+            //     icon: '🌐'
+            // }
         ],
         education: [
             {

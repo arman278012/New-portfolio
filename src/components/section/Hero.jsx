@@ -143,7 +143,7 @@ export const Hero = () => {
                     {/* Stats - Responsive Grid */}
                     <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 md:gap-8 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
                         {[
-                            { value: '2+', label: 'Years Experience', icon: '🎯' },
+                            { value: '3+', label: 'Years Experience', icon: '🎯' },
                             { value: '20+', label: 'Projects', icon: '🚀' },
                             { value: '100%', label: 'Passion', icon: '🔥' },
                             { value: '24/7', label: 'Learning', icon: '📚' }
