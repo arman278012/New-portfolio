@@ -287,7 +287,7 @@ export const Experience = () => {
     };
 
     const stats = [
-        { value: '2+', label: 'Years Experience', icon: <Calendar className="w-5 h-5" />, gradient: 'from-blue-500 to-cyan-400' },
+        { value: '3+', label: 'Years Experience', icon: <Calendar className="w-5 h-5" />, gradient: 'from-blue-500 to-cyan-400' },
         { value: '4+', label: 'Projects Shipped', icon: <Briefcase className="w-5 h-5" />, gradient: 'from-purple-500 to-pink-400' },
         { value: '8.20', label: 'B.Tech CGPA', icon: <Star className="w-5 h-5" />, gradient: 'from-green-500 to-emerald-400' },
         { value: '3', label: 'Companies', icon: <Building2 className="w-5 h-5" />, gradient: 'from-orange-500 to-yellow-400' }
