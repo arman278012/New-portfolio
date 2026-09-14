@@ -43,7 +43,7 @@ export const About = () => {
     ];
 
     const stats = [
-        { value: '2+', label: 'Years Experience', icon: '🔥' },
+        { value: '3+', label: 'Years Experience', icon: '🔥' },
         { value: '50+', label: 'Projects Built', icon: '🚀' },
         { value: '100%', label: 'Passion', icon: '❤️' },
         { value: '∞', label: 'Learning Drive', icon: '📚' }
