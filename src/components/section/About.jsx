@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 
 export const About = () => {
+    
     const passionPoints = [
         {
             icon: <Code2 className="w-6 h-6" />,

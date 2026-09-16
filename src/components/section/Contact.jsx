@@ -97,46 +97,46 @@ export const Contact = () => {
     ];
 
     return (
-        <section id="contact" className="relative py-24 bg-white dark:bg-gray-900 overflow-hidden">
+        <section id="contact" className="relative py-16 sm:py-24 bg-white dark:bg-gray-900 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-400/5 rounded-full blur-3xl"></div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
                 {/* Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl mb-6">
                         <MessageSquare className="w-10 h-10 text-blue-600 dark:text-blue-400" />
                         <Sparkles className="w-6 h-6 text-purple-500 dark:text-purple-400 -ml-2" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                         Let's <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Connect</span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
                         Have a project in mind or just want to chat? I'd love to hear from you!
                     </p>
                     <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mt-8"></div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12">
+                <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
                     {/* Left Column - Contact Info */}
                     <div className="space-y-8">
                         {/* Contact Information */}
-                        <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                                <Coffee className="w-6 h-6 text-blue-500" />
+                        <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+                            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                                <Coffee className="w-6 h-6 text-blue-500 flex-shrink-0" />
                                 Get In Touch
                             </h3>
 
                             <div className="space-y-6">
                                 {contactInfo.map((info, index) => (
                                     <div key={index} className="flex items-center gap-4 group">
-                                        <div className={`p-3 rounded-xl bg-gradient-to-br from-gray-100 to-white dark:from-gray-700 dark:to-gray-800 group-hover:scale-110 transition-transform duration-300 ${info.color}`}>
+                                        <div className={`flex-shrink-0 p-3 rounded-xl bg-gradient-to-br from-gray-100 to-white dark:from-gray-700 dark:to-gray-800 group-hover:scale-110 transition-transform duration-300 ${info.color}`}>
                                             {info.icon}
                                         </div>
-                                        <div>
+                                        <div className="min-w-0">
                                             <div className="text-sm text-gray-500 dark:text-gray-400">{info.label}</div>
-                                            <div className="font-medium text-gray-900 dark:text-white">{info.value}</div>
+                                            <div className="font-medium text-gray-900 dark:text-white break-words">{info.value}</div>
                                         </div>
                                     </div>
                                 ))}
@@ -145,14 +145,14 @@ export const Contact = () => {
                             {/* Social Links */}
                             <div className="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700">
                                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
-                                <div className="flex gap-3">
+                                <div className="flex flex-wrap gap-2 sm:gap-3">
                                     {socialLinks.map((social, index) => (
                                         <a
                                             key={index}
                                             href={social.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className={`p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 transform hover:scale-110 ${social.color}`}
+                                            className={`p-2.5 sm:p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 transform hover:scale-110 ${social.color}`}
                                             aria-label={social.label}
                                         >
                                             {social.icon}
@@ -175,9 +175,9 @@ export const Contact = () => {
                     </div>
 
                     {/* Right Column - Contact Form */}
-                    <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                            <Send className="w-6 h-6 text-purple-500" />
+                    <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-100 dark:border-gray-700">
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                            <Send className="w-6 h-6 text-purple-500 flex-shrink-0" />
                             Send a Message
                         </h3>
 
@@ -193,7 +193,7 @@ export const Contact = () => {
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <div className="grid sm:grid-cols-2 gap-6">
                                     <div className="group">
                                         <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                                             <User className="w-4 h-4" />
@@ -301,13 +301,13 @@ export const Contact = () => {
                 </div>
 
                 {/* Stats */}
-                <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="mt-16 sm:mt-20 grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                     {[
                         { value: '95%', label: 'Response Rate', icon: '📨' },
                         { value: '24h', label: 'Avg. Response Time', icon: '⚡' },
                         { value: '20+', label: 'Projects Discussed', icon: '🚀' },
                     ].map((stat, index) => (
-                        <div key={index} className="text-center p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <div key={index} className="text-center p-4 sm:p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                             <div className="text-3xl mb-2">{stat.icon}</div>
                             <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">{stat.value}</div>
                             <div className="text-gray-600 dark:text-gray-400 text-sm">{stat.label}</div>
