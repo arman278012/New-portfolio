@@ -145,17 +145,17 @@ export const Contact = () => {
                             {/* Social Links */}
                             <div className="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700">
                                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
-                                <div className="flex flex-wrap gap-2 sm:gap-3">
+                                <div className="flex flex-nowrap gap-1.5 sm:gap-3">
                                     {socialLinks.map((social, index) => (
                                         <a
                                             key={index}
                                             href={social.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className={`p-2.5 sm:p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 transform hover:scale-110 ${social.color}`}
+                                            className={`p-2 sm:p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 transform hover:scale-110 flex-shrink-0 ${social.color}`}
                                             aria-label={social.label}
                                         >
-                                            {social.icon}
+                                            {React.cloneElement(social.icon, { className: 'w-4 h-4 sm:w-5 sm:h-5' })}
                                         </a>
                                     ))}
                                 </div>
